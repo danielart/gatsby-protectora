@@ -17,28 +17,40 @@ try {
 
 module.exports = {
   siteMetadata: {
-    title: 'GCN',
+    title: 'APA PUPETC',
     description:
-      'A starter template to build amazing static websites with Gatsby, Contentful and Netlify',
+      'Web informativa de APA PUPETC, protectora de animales de Hospitalet de Llobregat',
     siteUrl: 'https://gcn.netlify.com',
     image: '/images/share.jpg',
     menuLinks: [
       {
         name: 'Home',
-        slug: '/',
+        slug: '/inicio/',
       },
       {
-        name: 'About',
-        slug: '/about/',
+        name: 'APA PUPETC',
+        slug: '/apa-pupetc/',
+      },
+      {
+        name: 'Donaciones',
+        slug: '/donaciones/',
+      },
+      {
+        name: 'Cómo ayudar',
+        slug: '/como-ayudar/',
+      },
+      {
+        name: 'Adopt',
+        slug: '/adopta/',
       },
       {
         name: 'Contact',
-        slug: '/contact/',
+        slug: '/contacta/',
       },
     ],
     postsPerFirstPage: 7,
     postsPerPage: 6,
-    basePath: '/',
+    basePath: '/apa-pupetc/',
   },
   plugins: [
     `gatsby-plugin-emotion`,

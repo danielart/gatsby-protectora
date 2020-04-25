@@ -36,6 +36,7 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
+    "react-hot-loader": "^4.12.20",
     "theme-ui": "^0.3.1"
   },
   "keywords": [
@@ -59,6 +60,7 @@
     "eslint": "^6.8.0",
     "eslint-config-gatsby-standard": "^2.2.0",
     "prettier": "^1.19.1",
+    "@hot-loader/react-dom": "^16.13.0",
     "stylelint": "^13.0.0",
     "stylelint-config-prettier": "^8.0.1",
     "stylelint-config-standard": "^19.0.0",

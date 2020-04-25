@@ -6,7 +6,6 @@ import { useSiteMetadata } from '../hooks/use-site-metadata'
 const Header = styled.header`
   background: ${props => props.theme.colors.primary};
   width: 100%;
-  padding: 1.5em 0;
 `
 const Nav = styled.nav`
   width: 100%;
@@ -14,30 +13,36 @@ const Nav = styled.nav`
   margin: 0 auto;
   padding: 0 1.5em;
 
-  ul {
+  section {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
   }
 
-  li {
-    display: inline-block;
-    margin-left: 1em;
-    &:first-of-type {
-      position: relative;
-      margin: 0;
-      flex-basis: 100%;
+  div {
+    padding: 1.5em;
+    mmargin-left: 1em;
+    min-width: 100px;
+    text-align: center;
+    transition: all 0.2s;
+
+    &:hover {
+      background: ${props => props.theme.colors.secondary};
     }
+  }
+
+  .menu-logo {
+    position: relative;
+    flex-basis: 100%;
+    background: ${props => props.theme.colors.primary};
+    margin: 1em 10em 1em 0;
+    max-width: 50px;
+    max-height: 50px;
   }
 
   a {
     text-decoration: none;
-    color: DarkGray;
+    color: white;
     font-weight: 600;
-    transition: all 0.2s;
-    border-bottom: 2px solid ${props => props.theme.colors.text};
-    &:hover {
-      color: white;
-    }
   }
 `
 
@@ -50,15 +55,21 @@ const Menu = () => {
   return (
     <Header>
       <Nav>
-        <ul>
+        <section>
+          <img
+            className="menu-logo"
+            src="//images.ctfassets.net/56hdjtk8xz2m/4BwVsTXJY8yVAsLI6j31KL/ae91801cf6087633921f2a622e422fe3/menu_logo.png"
+            alt="Powered by Contentful"
+          />
+
           {menuLinks.map(link => (
-            <li key={link.name}>
+            <div key={link.name}>
               <Link to={link.slug} activeStyle={activeLinkStyle}>
                 {link.name}
               </Link>
-            </li>
+            </div>
           ))}
-        </ul>
+        </section>
       </Nav>
     </Header>
   )

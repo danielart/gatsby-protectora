@@ -9,6 +9,39 @@ module.exports.data = {
       }
     }
   }`,
+  animals: `{
+  allContentfulAnimal {
+    edges {
+      node {
+        id
+        title
+        adopted
+        age
+        breed
+        contentful_id
+        description {
+          id
+          content {
+            content {
+              value
+            }
+          }
+        }
+        weight
+        slug
+        size
+        entrance
+        pictures {
+          id
+          file {
+            url
+          }
+        }
+      }
+    }
+  }
+}
+`,
   pages: `{
     allContentfulPage {
       edges {

@@ -6,7 +6,7 @@ const { paginate } = require(`gatsby-awesome-pagination`)
 module.exports = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const basePath = config.siteMetadata.basePath || '/'
+  const basePath = config.siteMetadata.basePath || '/apa-pupetc/'
 
   // Create a page for each "post"
   const postsQuery = await graphql(query.data.posts)

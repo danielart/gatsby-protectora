@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 
-const Post = styled.li`
+const Info = styled.li`
   position: relative;
   border: 1px solid ${props => props.theme.colors.secondary};
   border-radius: 2px;
@@ -54,38 +54,39 @@ const Date = styled.h3`
   color: gray;
 `
 
-const ReadingTime = styled.h4`
-  margin: 0 1rem 1.5rem 1rem;
-  color: gray;
-`
-
 const Excerpt = styled.p`
   margin: 0 1rem 1rem 1rem;
   line-height: 1.6;
 `
 
-const Card = ({ slug, heroImage, title, publishDate, body, ...props }) => {
+const Animal = ({ animal, ...props }) => {
+  const {
+    id,
+    title,
+    adopted,
+    age,
+    breed,
+    contentful_id,
+    description,
+    weight,
+    slug,
+    size,
+    entrance,
+    pictures,
+  } = animal
   return (
     <>
-      {heroImage && (heroImage.fluid || heroImage.fixed) && body && (
-        <Post featured={props.featured}>
+      {pictures[0] && (pictures[0].fluid || pictures[0].fixed) && title && (
+        <Info>
           <Link to={`${props.basePath}/${slug}/`}>
-            <StyledImg fluid={heroImage.fluid} backgroundColor={'#eeeeee'} />
+            <StyledImg fluid={pictures[0].fluid} backgroundColor={'#eeeeee'} />
             <Title>{title}</Title>
-            <Date>{publishDate}</Date>
-            <ReadingTime>
-              {body.childMarkdownRemark.timeToRead} min read
-            </ReadingTime>
-            <Excerpt
-              dangerouslySetInnerHTML={{
-                __html: body.childMarkdownRemark.excerpt,
-              }}
-            />
+            <Date>{entrance}</Date>
           </Link>
-        </Post>
+        </Info>
       )}
     </>
   )
 }
 
-export default Card
+export default Animal
