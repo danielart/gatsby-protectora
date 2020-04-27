@@ -25,7 +25,7 @@ module.exports = {
     menuLinks: [
       {
         name: 'Home',
-        slug: '/inicio/',
+        slug: '/',
       },
       {
         name: 'APA PUPETC',
@@ -45,7 +45,7 @@ module.exports = {
       },
       {
         name: 'Contact',
-        slug: '/contacta/',
+        slug: '/contacto/',
       },
     ],
     postsPerFirstPage: 7,

@@ -41,14 +41,8 @@ export const query = graphql`
           adopted
           age
           breed
-          contentful_id
           description {
-            id
-            content {
-              content {
-                value
-              }
-            }
+            description
           }
           weight
           slug

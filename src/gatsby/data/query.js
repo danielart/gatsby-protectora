@@ -19,14 +19,7 @@ module.exports.data = {
         age
         breed
         contentful_id
-        description {
-          id
-          content {
-            content {
-              value
-            }
-          }
-        }
+        description
         weight
         slug
         size
